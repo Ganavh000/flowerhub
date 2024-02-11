@@ -1,0 +1,65 @@
+body {
+            background-color: rgb(4, 28, 101);
+            font-family: cursive;
+            color: goldenrod; /* Text color */
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Make the body take up the full viewport height */
+        }
+        /* You can add more styles for different elements like headers, paragraphs, etc. */
+        /* Example */
+        h1 {
+            font-size: 36px;
+        }
+        p {
+            font-size: 18px;
+        }
+        header, footer {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.1); /* Light grey background color with opacity */
+            padding: 5px 1; /* Add padding top and bottom */
+            width: 100%; /* Make header and footer take up full width */
+        }
+        footer {
+            margin-top: auto; /* Push footer to bottom */
+        }
+        nav ul {
+            list-style-type: none; /* Remove bullet points */
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline; /* Display navigation items horizontally */
+            margin-right: 100px; /* Add space between navigation items */
+        }
+        nav ul li a {
+            text-decoration: none; /* Remove underline */
+            color: white;
+            font-weight: bold;
+        }
+        main {
+            display: flex;
+            width: 100%;
+            padding: 20px;
+        }
+        section {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .image {
+            width: 50%;
+        }
+        .description {
+            width: 50%;
+            padding: 0 20px;
+        }
+        .image img {
+            max-width: 100%;
+            height: auto;
+        }
