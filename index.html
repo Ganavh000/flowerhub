@@ -5,24 +5,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FlowerHub</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Welcome to FlowerHub</h1>
+    <header class="site-header">
+        <div class="brand">
+            <span class="brand-mark">FlowerHub</span>
+            <span class="brand-tagline">Curated florals for every moment</span>
+        </div>
+        <nav>
+            <ul id="navigation" class="nav-links">
+                <li><a href="#" onclick="fetchSectionData('home')">Home</a></li>
+                <li><a href="#" onclick="fetchSectionData('about')">About</a></li>
+                <li><a href="#" onclick="fetchSectionData('services')">Services</a></li>
+                <li><a href="#" onclick="fetchSectionData('contact')">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="primary-button" type="button">Order Bouquets</button>
     </header>
-    <nav>
-        <ul id="navigation">
-            <li><a href="#" onclick="fetchSectionData('home')">Home</a></li>
-            <li><a href="#" onclick="fetchSectionData('about')">About</a></li>
-            <li><a href="#" onclick="fetchSectionData('services')">Services</a></li>
-            <li><a href="#" onclick="fetchSectionData('contact')">Contact</a></li>
-        </ul>
-    </nav>
-    <main id="section-container">
-        <!-- Sections will be dynamically populated here -->
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <p class="eyebrow">Same-day delivery in the city</p>
+                <h1>Bring the warmth of fresh blooms to every celebration.</h1>
+                <p class="hero-description">
+                    Hand-arranged bouquets, seasonal stems, and thoughtful gifts designed by local florists.
+                    Pick a mood, set the date, and we deliver the magic.
+                </p>
+                <div class="hero-actions">
+                    <button class="primary-button" type="button">Browse Collections</button>
+                    <button class="secondary-button" type="button">Plan an Event</button>
+                </div>
+            </div>
+            <div class="hero-card">
+                <p class="hero-card-title">Today’s Pick</p>
+                <h2>Sunset Garden</h2>
+                <p>Soft roses, ranunculus, and golden accents designed to glow from morning to night.</p>
+                <div class="hero-meta">
+                    <span>From $48</span>
+                    <span>Ready in 2 hours</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="trust-bar">
+            <div>
+                <h3>4.9/5</h3>
+                <p>Customer rating</p>
+            </div>
+            <div>
+                <h3>100+ varieties</h3>
+                <p>Fresh stems daily</p>
+            </div>
+            <div>
+                <h3>Eco wraps</h3>
+                <p>Plastic-free packaging</p>
+            </div>
+        </section>
+
+        <section class="section-header">
+            <h2>Explore FlowerHub</h2>
+            <p>Discover the latest arrangements and inspiration from our floral atelier.</p>
+        </section>
+
+        <section id="section-container" class="section-grid">
+            <!-- Sections will be dynamically populated here -->
+        </section>
     </main>
+
     <footer>
-        <p>&copy; 2024 FlowerHub. All rights reserved.</p>
+        <div>
+            <h3>FlowerHub</h3>
+            <p>Open daily • 8am - 8pm</p>
+        </div>
+        <div>
+            <p>hello@flowerhub.com</p>
+            <p>+1 (555) 120-3344</p>
+        </div>
+        <p class="footer-note">&copy; 2024 FlowerHub. All rights reserved.</p>
     </footer>
     <script src="script.js"></script>
 </body>

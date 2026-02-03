@@ -11,22 +11,26 @@ function fetchSectionData(section) {
 
 function populateSection(data) {
     const sectionContainer = document.getElementById('section-container');
-    sectionContainer.innerHTML = ''; // Clear existing content
-    
+    sectionContainer.innerHTML = '';
+
     data.forEach(item => {
-        const section = document.createElement('section');
-        
+        const card = document.createElement('article');
+        card.classList.add('section-card');
+
         const image = document.createElement('img');
         image.src = item.image;
-        image.style.width = '30%'; // Set maximum width to ensure images don't exceed container width
-        image.style.height = 'auto'; // Maintain aspect ratio
-        
+        image.alt = item.description;
+
+        const body = document.createElement('div');
+        body.classList.add('card-body');
+
         const description = document.createElement('p');
         description.textContent = item.description;
-        
-        section.appendChild(image);
-        section.appendChild(description);
-        
-        sectionContainer.appendChild(section);
+
+        body.appendChild(description);
+        card.appendChild(image);
+        card.appendChild(body);
+
+        sectionContainer.appendChild(card);
     });
 }
